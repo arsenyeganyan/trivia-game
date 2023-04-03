@@ -1,0 +1,41 @@
+body{
+  margin: 0;
+  padding: 0;
+  font-family: 'Golos Text', sans-serif;;
+  background-color: rgb(205, 231, 255);
+}
+
+/* Start page */
+
+.start--page{
+  text-align: center;
+}
+
+.start--title{
+  color: rgb(131, 109, 109);
+  font-size: 100px;
+}
+
+.start--btn{
+  background-color: rgb(81, 81, 125);
+  color: whitesmoke;
+  width: 200px;
+  height: 80px;
+  font-size: 30px;
+  border-radius: 10px;
+}
+
+.start--btn:hover{
+  transition: 0.5s;
+  background-color: rgb(51, 51, 111);
+}
+
+.start--btn:active{
+  transition: 0.05s;
+  background-color: rgb(102, 102, 125);
+}
+
+.disc{
+  margin-top: 40px;
+  color: rgb(135, 94, 94);
+}
