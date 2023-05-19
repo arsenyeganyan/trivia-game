@@ -1,56 +1,58 @@
-import React from "react";
+import React, { useState } from "react";
 import "./style.css";
 import Questions from "./components/Questions";
+import Other from "./components/Other";
 
-export default function App(){
-  
-  //switching the page from start to questions
-  const [pageQ, setPageQ] = React.useState(false);
+function App(){
+  //switching from the title page to the main(q) page
+  const [pageQ, setPageQ] = useState(false);
 
-  function pageSetter(){
-    setPageQ(true);
-  }
-
+  //requesting data
   const [quests, setQuests] = React.useState({});
-
-  //requesting trivia from the api
   React.useEffect(() => {
-    fetch("https://opentdb.com/api.php?amount=5")
-      .then(res => res.json())
-      .then(data => setQuests(data));
-
-    console.log(quests);
-  }, [pageQ]);
+    fetch("/data.json")
+      .then((res) => res.json())
+      .then((data) => setQuests(data));
+    }, []);
+    
+  console.log(quests.results);
   
-  const randQ = Math.ceil(Math.random() * 5);
-  const dataReturn = JSON.stringify(quests.results[randQ].question, null, 2);
-  console.log(dataReturn);
-
+  // const renderQuestions = quests.results.map((result) => ( 
+  //   <Questions
+  //     category={result.category}
+  //     difficulty={result.difficulty}
+  //     question={result.question}
+  //     answers={[result.correct_answer, 
+  //               result.incorrect_answers[0],
+  //               result.incorrect_answers[1],
+  //               result.incorrect_answers[2]
+  //             ]}
+  //   />
+  //   ));
+  
   return(
-    <main>
-      {pageQ ?
-        
-        <Questions 
-          // value={dataReturn}
-        />
-        
+    <div>
+        {pageQ ?
+          <div>
+            <Other/>
+            {/* {renderQuestions} */}
+          </div>
         :
-
-        <div className="start--page">
+          <div className="start--page">
               <h1 className="start--title">
                   Fun Trivia by Arsen
               </h1>
-
-              <button className="start--btn" onClick={pageSetter}>
+              <button className="start--btn" onClick={() => setPageQ(!pageQ)}>
                   Start Trivia
               </button>
 
               <h3 className="disc">
-                When you are ready, press the button to start
+                When you are ready, press the button above to start.
               </h3>
           </div>
       }
-
-    </main>
+    </div>
   )
 }
+
+export default App;
