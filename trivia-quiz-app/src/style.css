@@ -41,5 +41,80 @@ body{
   color: rgb(135, 94, 94);
 }
 
+/* Loading Screen */
+
+.loading--screen{
+  text-align: center;
+  font-size: 40px;
+  margin-top: 50px;
+  color: rgb(131, 109, 109);
+}
+
+/* Other */
+
+.main--info{
+  text-align: center;
+  color: rgb(131, 109, 109);
+  margin-top: 40px;
+}
+
 /* Questions */
 
+.questions{
+  text-align: center;
+  margin: auto;
+  width: 40%;
+  margin-bottom: 70px;
+}
+
+.difficulty, .answers{
+  margin-top: 50px;
+}
+
+.category, .difficulty{
+  color: rgb(37, 83, 83);
+}
+
+.question{
+  margin-top: 30px;
+  background-color: rgb(49, 113, 114);
+  border-radius: 15px;
+}
+
+.question--text{
+  padding: 10px;
+  color: white;
+}
+
+.category{
+  margin-top: 100px;
+  font-size: 25px;
+  text-decoration: underline;
+}
+
+.difficulty{
+  font-size: 20px;
+}
+
+.choice{
+  margin-right: 10px;
+  background-color: rgb(78, 166, 168);
+  width: 20%;
+  border-radius: 10px;
+  display: inline-block;
+  font-size: 20px;
+  color: rgb(37, 37, 37);
+  padding: 10px;
+  cursor: pointer;
+}
+
+.choice:hover{
+  background-color: rgb(70, 144, 147);
+  transition: all 0.3s;
+}
+
+.choice:active{
+  background-color: rgb(59, 121, 123);
+  transition: all 0.2s;
+  cursor: grabbing;
+}
