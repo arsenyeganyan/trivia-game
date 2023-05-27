@@ -24,8 +24,9 @@ function App(){
           {pageQ ?
             <div>
               <Other/>
-              {quests.results.map((result) => (
+              {quests.results.map((result, k) => (
                 <Questions
+                  key={k}
                   category={result.category}
                   difficulty={result.difficulty}
                   question={result.question}

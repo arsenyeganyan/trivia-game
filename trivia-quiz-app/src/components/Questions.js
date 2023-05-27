@@ -1,4 +1,4 @@
-import React from "react";
+import { useState } from "react";
 
 function Questions(props){
     //filling the answer polls
@@ -11,6 +11,22 @@ function Questions(props){
         return Math.random() - 0.5;
     });
 
+    const [answer, setAnswer] = useState(false)
+    const [right, setRight] = useState([]);
+    
+    function Setting(){
+        setRight([
+            ...right,
+            right.push(p)
+        ])
+
+        let color;
+        if(right.includes(props.correct_answer)){
+            color = true;
+        }
+        else{ color = false }
+    }
+    
     return(
         <div className="questions">
             <div className="category">
@@ -25,7 +41,12 @@ function Questions(props){
             <div className="answers">
                     {
                         shuffledArr.map((p, index) => (
-                            <section className="choice" key={index}>{p}</section>
+                            <section 
+                                className={  }
+                                key={index}
+                                onClick={setting}>
+                                    {p}
+                            </section>
                         ))
                     }
             </div>
