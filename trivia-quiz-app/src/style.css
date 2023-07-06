@@ -96,16 +96,19 @@ body{
   font-size: 20px;
 }
 
-.choice{
+.choice, .right, .wrong{
   margin-right: 10px;
-  background-color: rgb(78, 166, 168);
-  width: 20%;
+  width: auto;
   border-radius: 10px;
   display: inline-block;
-  font-size: 20px;
+  font-size: 23px;
   color: rgb(37, 37, 37);
   padding: 10px;
   cursor: pointer;
+}
+
+.choice{
+  background-color: rgb(78, 166, 168);
 }
 
 .choice:hover{
@@ -117,4 +120,12 @@ body{
   background-color: rgb(59, 121, 123);
   transition: all 0.2s;
   cursor: grabbing;
+}
+
+.right{
+  background-color: rgb(75, 176, 74);
+}
+
+.wrong{
+  background-color: rgb(169, 65, 65);
 }

@@ -4,7 +4,7 @@ import Questions from "./components/Questions";
 import Other from "./components/Other";
 
 function App(){
-  //switching from the title page to the main(q) page
+  //switching from the title page to the main (quiz) page.
   const [pageQ, setPageQ] = useState(false);
 
   //requesting data
@@ -15,13 +15,13 @@ function App(){
       .then((data) => setQuests(data));
     }, []);
   
-  if(typeof quests === undefined){
+  if(!quests){
     return <div className="loading--screen">Loading...</div>
   }
   else{
     return(
       <div>
-          {pageQ ?
+          {/* {pageQ ? */}
             <div>
               <Other/>
               {quests.results.map((result, k) => (
@@ -35,7 +35,7 @@ function App(){
                 />
               ))}
             </div>
-          :
+          {/* :
             <div className="start--page">
                 <h1 className="start--title">
                     Fun Trivia by Arsen
@@ -47,8 +47,8 @@ function App(){
                 <h3 className="disc">
                   When you are ready, press the button above to start.
                 </h3>
-            </div>
-        }
+            </div> */}
+        {/*  } */}
       </div>
     )
   }
