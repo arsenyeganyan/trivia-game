@@ -19,7 +19,7 @@ function App(){
   }
   else{
     return(
-      <div>
+      <>
           {pageQ ?
             <div>
               <Other />
@@ -48,7 +48,7 @@ function App(){
                 </h3>
             </div>
          }
-      </div>
+      </>
     )
   }
 }
