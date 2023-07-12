@@ -98,6 +98,7 @@ body{
 
 .choice, .right, .wrong{
   margin-right: 10px;
+  margin-top: 10px;
   width: auto;
   border-radius: 10px;
   display: inline-block;
@@ -128,4 +129,13 @@ body{
 
 .wrong{
   background-color: rgb(169, 65, 65);
+}
+
+.game--over{
+  display: flex;
+  justify-content: space-around;
+  margin: 80px 20px 80px 20px;
+  font-size: 30px;
+  color: rgb(57, 79, 99);
+  text-shadow: 2px 2px 2px rgb(176, 176, 176);
 }

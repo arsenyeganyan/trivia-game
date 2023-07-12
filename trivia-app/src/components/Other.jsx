@@ -7,7 +7,7 @@ function Other(){
                 WELCOME TO THE ULTIMATE TRIVIA QUIZ BY ARSEN
             </h1>
             <h2 className="main--desc">
-                Click on the answer, that you think is the right one.
+                Read the question, then click on the answer, that you think is the right one.
             </h2>
         </div>
     )
